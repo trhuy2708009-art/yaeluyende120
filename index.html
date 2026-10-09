@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập - Trung tâm HS</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        hsRed: '#cd182a',
+                        hsBlue: '#1b3474',
+                        bgBeige: '#fcf3eb',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            /* Giả lập hình nền mờ của trang web */
+            background-color: #f6efe9;
+            background-image: radial-gradient(circle at 10% 50%, rgba(255, 230, 230, 0.4) 0%, transparent 40%),
+                              radial-gradient(circle at 90% 50%, rgba(255, 230, 230, 0.4) 0%, transparent 40%);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col font-sans text-gray-800">
+
+    <!-- Header / Navbar -->
+    <header class="bg-white shadow-sm px-6 py-3 flex justify-between items-center z-20 sticky top-0">
+        <div class="flex items-center gap-6">
+            <!-- Logo -->
+            <div class="flex items-center gap-2 cursor-pointer">
+                <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="45" stroke="#cd182a" stroke-width="4"/>
+                    <path d="M50 15 L60 40 L85 40 L65 55 L75 80 L50 65 L25 80 L35 55 L15 40 L40 40 Z" stroke="#cd182a" stroke-width="3" fill="none"/>
+                    <path d="M50 15 L25 80 M50 15 L75 80 M15 40 L75 80 M85 40 L25 80 M15 40 L85 40" stroke="#cd182a" stroke-width="1.5" stroke-opacity="0.5"/>
+                </svg>
+                <span class="text-3xl font-bold text-hsRed">HS</span>
+            </div>
+            <!-- Back link -->
+            <a href="#" class="text-blue-700 font-semibold flex items-center gap-2 hover:text-blue-800 text-sm ml-4">
+                <i class="fa-solid fa-chevron-left"></i> Quay lại sảnh chính
+            </a>
+        </div>
+        
+        <div class="flex items-center gap-6 text-sm font-semibold text-gray-700">
+            <a href="#" class="hover:text-hsRed transition flex items-center gap-2">
+                <i class="fa-solid fa-clapperboard text-gray-500"></i> Khóa học
+            </a>
+            <a href="#" class="hover:text-hsRed transition flex items-center gap-2">
+                <i class="fa-solid fa-user-pen text-gray-500"></i> Phòng luyện
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center justify-center p-4 z-10 relative">
+        <div class="max-w-[1000px] w-full grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+            
+            <!-- Left Card: Info -->
+            <div class="bg-gradient-to-br from-white via-[#fff5f5] to-[#f0f5ff] p-10 rounded-xl shadow-lg border border-white relative overflow-hidden">
+                <!-- Nền mờ giả lập họa tiết đằng sau chữ -->
+                <div class="absolute right-0 bottom-0 opacity-5 pointer-events-none">
+                    <svg width="200" height="200" viewBox="0 0 100 100"><path d="M50 15 L60 40 L85 40 L65 55 L75 80 L50 65 L25 80 L35 55 L15 40 L40 40 Z" stroke="#000" stroke-width="5" fill="none"/></svg>
+                </div>
+
+                <div class="flex items-center gap-2 text-hsRed font-bold text-sm mb-4">
+                    <i class="fa-solid fa-star"></i> Trung tâm HS
+                </div>
+                
+                <h1 class="text-4xl font-bold text-hsBlue leading-tight mb-4">
+                    Đăng nhập để tiếp tục học tập
+                </h1>
+                
+                <p class="text-gray-500 text-sm mb-10 leading-relaxed pr-4">
+                    Theo dõi khóa học, phòng luyện, lịch sử làm bài và quyền VIP của bạn trên cùng một hệ thống.
+                </p>
+
+                <div class="flex flex-col gap-5">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded bg-blue-50 text-blue-700 flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-film"></i>
+                        </div>
+                        <span class="font-bold text-hsBlue text-sm">Khóa học TSA, HSA đồng bộ</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded bg-blue-50 text-blue-700 flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-file-pen"></i>
+                        </div>
+                        <span class="font-bold text-hsBlue text-sm">Luyện đề và xem lại bài làm</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded bg-blue-50 text-blue-700 flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-crown"></i>
+                        </div>
+                        <span class="font-bold text-hsBlue text-sm">Kích hoạt mã VIP nhanh chóng</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Card: Login Form -->
+            <div class="bg-white p-10 rounded-xl shadow-lg border border-gray-100 flex flex-col items-center">
+                <!-- Logo -->
+                <div class="flex items-center gap-2 mb-2">
+                    <svg width="45" height="45" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="45" stroke="#cd182a" stroke-width="4"/>
+                        <path d="M50 15 L60 40 L85 40 L65 55 L75 80 L50 65 L25 80 L35 55 L15 40 L40 40 Z" stroke="#cd182a" stroke-width="3" fill="none"/>
+                        <path d="M50 15 L25 80 M50 15 L75 80 M15 40 L75 80 M85 40 L25 80 M15 40 L85 40" stroke="#cd182a" stroke-width="1.5" stroke-opacity="0.5"/>
+                    </svg>
+                    <span class="text-4xl font-bold text-hsRed tracking-tight">HS</span>
+                </div>
+                
+                <h2 class="text-2xl font-bold text-hsBlue mb-2">Đăng nhập</h2>
+                <p class="text-gray-500 text-sm mb-8 text-center">Vào tài khoản học sinh để tiếp tục hành trình luyện thi.</p>
+
+                <form class="w-full" action="#" method="POST">
+                    <!-- Email Field -->
+                    <div class="mb-5">
+                        <label class="block text-gray-800 font-bold text-xs mb-2">Email</label>
+                        <div class="relative flex items-center">
+                            <i class="fa-solid fa-envelope absolute left-4 text-gray-400"></i>
+                            <input type="email" placeholder="Nhập địa chỉ email" class="w-full pl-11 pr-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-sm transition" required>
+                        </div>
+                    </div>
+
+                    <!-- Password Field -->
+                    <div class="mb-6">
+                        <label class="block text-gray-800 font-bold text-xs mb-2">Mật khẩu</label>
+                        <div class="relative flex items-center">
+                            <i class="fa-solid fa-lock absolute left-4 text-gray-400"></i>
+                            <input type="password" placeholder="Nhập mật khẩu" class="w-full pl-11 pr-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-sm transition" required>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="w-full bg-hsRed hover:bg-red-700 text-white font-bold py-3 px-4 rounded-lg flex justify-center items-center gap-2 transition duration-200">
+                        <i class="fa-solid fa-right-to-bracket"></i> Đăng nhập
+                    </button>
+                </form>
+
+                <!-- Footer Links -->
+                <div class="mt-6 text-center text-sm">
+                    <p class="text-gray-500 mb-2">Chưa có tài khoản? <a href="#" class="text-hsRed font-bold hover:underline">Đăng ký ngay</a></p>
+                    <a href="#" class="text-hsRed font-bold hover:underline">Bạn quên mật khẩu?</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</body>
+</html>
